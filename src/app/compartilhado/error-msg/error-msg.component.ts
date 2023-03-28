@@ -6,12 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./error-msg.component.css'],
 })
 export class ErrorMsgComponent {
-  public error: string | undefined;
+  public error: string = 'nada';
 
   setError(error: string, tempo: number = 5000) {
     this.error = error;
     setTimeout(() => {
-      this.error = '';
+      this.error = 'nada';
     }, tempo);
   }
 }
